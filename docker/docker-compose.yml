@@ -1,0 +1,14 @@
+name: webmunk-org
+
+services:
+  nginx:
+    image: nginx
+    env_file: .env
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates
+      - ../www-files:/var/www/files
+    ports:
+      - "${NGINX_WEB_PORT}:${NGINX_WEB_PORT}"
+    environment:
+      - NGINX_WEB_HOST=${NGINX_WEB_HOST}
+      - NGINX_WEB_PORT=${NGINX_WEB_PORT}

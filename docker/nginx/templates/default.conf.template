@@ -1,0 +1,9 @@
+server {
+    listen ${NGINX_WEB_PORT};
+
+    access_log ${NGINX_WEB_ACCESS_LOG};
+
+    location / {
+        alias /var/www/files/;
+    }
+}
