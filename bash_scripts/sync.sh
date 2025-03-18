@@ -5,6 +5,6 @@
 
 cd /var/www/docker/webmunk.org/www.webmunk.org
 
-if [[ $(git pull origin deploy 2>/dev/null) != *"Already up-to-date"* ]]; then
+if [[ $(git pull origin deploy 2>/dev/null) != *"Already up to date"* ]]; then
 	echo "Updated site."
 fi
